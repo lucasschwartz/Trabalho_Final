@@ -1,19 +1,19 @@
 
 /**
- * Write a description of class Avianos here.
+ * Write a description of class Anotacoes here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Avianos
+public class Anotacoes
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class Avianos
+     * Constructor for objects of class Anotacoes
      */
-    public Avianos()
+    public Anotacoes()
     {
         // initialise instance variables
         x = 0;
