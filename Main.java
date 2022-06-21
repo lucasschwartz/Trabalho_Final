@@ -7,9 +7,16 @@
  */
 public class Main
 {
+    /**
+     * Dados ficaram salvos dentro dessa classe.
+     */
     public static void main()
     {
         Ave a1 = new Ave("T-rex");
-        System.out.print(a1.getNome());
+        Ave a2 = new Ave("Teste");
+        Ave a3 = new Ave("Teste2");
+        System.out.printf("%s%n",a1.getNome());
+        System.out.printf("%s%n",a2.getNome());
+        System.out.printf("%s%n",a3.getNome());
     }
 }
