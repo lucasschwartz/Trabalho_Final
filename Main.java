@@ -7,16 +7,24 @@
  */
 public class Main
 {
+    public static String nomesCientificos[] = {"Patagioenas picazuro", "Patagioenas maculosa", "Zenaida auriculata", 
+           "Columbina picui", "Gubernetes yetapa", "Xolmis cinereus",
+           "Griseotyrannus aurantioatrocristatus", "Prognet tapera", "Suiriri suiriri", 
+           "Pyrocephalus runinus"};
+    
     /**
      * Dados ficaram salvos dentro dessa classe.
      */
     public static void main()
     {
-        Ave a1 = new Ave("T-rex");
-        Ave a2 = new Ave("Teste");
-        Ave a3 = new Ave("Teste2");
-        System.out.printf("%s%n",a1.getNome());
-        System.out.printf("%s%n",a2.getNome());
-        System.out.printf("%s%n",a3.getNome());
+        Ave c[];
+        c = new Ave[10];
+        for(int i = 0; i < 10; i++) {
+            c[i] = new Ave(nomesCientificos[i]);
+        }
+        
+        for (int j = 0; j < 10; j++){
+            System.out.printf("%s%n", c[j].getNome());
+        }
     }
 }
