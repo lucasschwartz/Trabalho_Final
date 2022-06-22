@@ -13,7 +13,7 @@ public class Anotacoes
     public Ave passaro;
     
     /**
-     *  Lugar para definir a data
+     *  Contrutor de objetos da classe anotação
      */
     public Anotacoes(String data, String horario, String local, Ave passaro)
     {
@@ -24,7 +24,7 @@ public class Anotacoes
     }
     
     /**
-     *  
+     *  Passa a dada de uma determinada anotação
      */
     public String getData(){
         return this.data;
