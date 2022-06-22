@@ -50,7 +50,9 @@ public class Main
             for(int i = 0; i < 10; i++) {
                 aves[i] = new Ave(nomesCientificos[i], sizePassaro[i]);
             }
+            
             // FAZER UM WHILE A PARTIR DAQUI PRO PROGRAMA CONTINUAR RODANDO ATÉ A CONDIÇÃO 0!!!
+            
             // Inicio do menu
             System.out.printf("\f");
             System.out.printf("MENU %n");
@@ -79,13 +81,13 @@ public class Main
                     break;
                 case 3:
                     System.out.println("Insira a data");
-                    String data = sc.nextLine();
+                    String data = sc.next();
                     System.out.println("Insira o horario");
-                    String horario = sc.nextLine();
+                    String horario = sc.next();
                     System.out.println("Insira o local");
-                    String local = sc.nextLine();
+                    String local = sc.next();
                     System.out.println("Insira o passaro");
-                    String nome = sc.nextLine();
+                    String nome = sc.next();
                     Ave aux = null;
                     for(int i = 0; i < aves.length; i++){
                         if(nome.equalsIgnoreCase(aves[i].getName()))

@@ -1,9 +1,10 @@
 import java.util.Scanner;
 /**
- * Write a description of class Anotacoes here.
+ * Anotações pedidas no trabalho. 
+ * O usuário poderá registrar e acessar informações disponíveis nessa classe.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Lavínia)
+ * @version (22/06/2022)
  */
 public class Anotacoes
 {
