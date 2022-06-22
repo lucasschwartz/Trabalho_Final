@@ -71,34 +71,34 @@ public class Main
             number = sc.nextInt();
             switch (number) {
                 case 1:
-                    System.out.printf("%s%n", aves[0].getName());
+                    System.out.printf("%s  %s   %n", aves[0].getName(),aves[0].getSize());
                     break;
                 case 2:
-                    System.out.printf("%s%n", aves[1].getName());
+                    System.out.printf("%s  %s   %n", aves[1].getName(),aves[1].getSize());
                     break;
                 case 3:
-                    System.out.printf("%s%n", aves[2].getName());
+                    System.out.printf("%s  %s   %n", aves[2].getName(),aves[2].getSize());
                     break;
                 case 4:
-                    System.out.printf("%s%n", aves[3].getName());
+                    System.out.printf("%s  %s   %n", aves[3].getName(),aves[3].getSize());
                     break;
                 case 5:
-                    System.out.printf("%s%n", aves[4].getName());
+                    System.out.printf("%s  %s   %n", aves[4].getName(),aves[4].getSize());
                     break;
                 case 6:
-                    System.out.printf("%s%n", aves[5].getName());
+                    System.out.printf("%s  %s   %n", aves[5].getName(),aves[5].getSize());
                     break;
                 case 7:
-                    System.out.printf("%s%n", aves[6].getName());
+                    System.out.printf("%s  %s   %n", aves[6].getName(),aves[6].getSize());
                     break;
                 case 8:
-                    System.out.printf("%s%n", aves[7].getName());
+                    System.out.printf("%s  %s   %n", aves[7].getName(),aves[7].getSize());
                     break;
                 case 9:
-                    System.out.printf("%s%n", aves[8].getName());
+                    System.out.printf("%s  %s   %n", aves[8].getName(),aves[8].getSize());
                     break;
                 case 10:
-                    System.out.printf("%s%n", aves[9].getName());
+                    System.out.printf("%s  %s   %n", aves[9].getName(),aves[9].getSize());
                     break;
                     
             }
