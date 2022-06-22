@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 /**
  * Write a description of class Anotacoes here.
  *
@@ -29,5 +29,30 @@ public class Anotacoes
     {
         // put your code here
         return x + y;
+    }
+    
+    /**
+     *  Lugar para definir a data
+     */
+    public void Data(String[] args)
+    {
+        int dia, mes, ano;
+        Scanner teclado = new Scanner(System.in);
+        dia = teclado.nextInt();
+        mes = teclado.nextInt();
+        ano = teclado.nextInt();
+        teclado.close();
+        
+        System.out.printf("%d,/ %d,/ %d,/ %n", dia, mes, ano);
+    }
+    
+    public void Hora(String[] args) {
+        int hora, min;
+        Scanner teclado = new Scanner(System.in);
+        hora = teclado.nextInt();
+        min = teclado. nextInt();
+        teclado.close();
+        
+        System.out.printf("%d, : %d, %n", hora, min);
     }
 }
