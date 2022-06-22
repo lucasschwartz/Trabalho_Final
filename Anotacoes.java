@@ -8,13 +8,17 @@ import java.util.Scanner;
 public class Anotacoes
 {
     public int dia;
+    public int mes;
+    public int ano;
     
     /**
      *  Lugar para definir a data
      */
-    public Anotacoes(int dia)
+    public Anotacoes(int dia, int mes, int ano)
     {
         this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
     }
     
     /**
