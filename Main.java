@@ -14,6 +14,25 @@ public class Main
     public static int sizePassaro[] = { 10, 15,10,16,17,1,2,3,4,5          
     };
     
+    public static String colorPassaro[] = {"azuro", "Pata", "Zenaa", 
+           "Ci", "Guberpa", "Xolmeus",
+           "Griistatus", "Prra", "Siri", 
+           "Pus"};
+    
+    public static String habitatPassaro[] = {"Pro", "Pataga", "Zta", 
+           "Cicui", "Gupa", "Xeus",
+           "Gatus", "Pra", "Sui si", 
+           " rus"};
+    
+    public static String genderPassaro[] = {"M", "a", "ta", 
+           "Ci", "pa", "Xus",
+           "Gs", "Pa", "Si i", 
+           " rs"};
+           
+           public static String namePhoto[] = {"Pro", "Pataga", "Zta", 
+           "Cicui", "Gupa", "Xeus",
+           "Gatus", "Pra", "Sui si", 
+           " rus"};
     /**
      * Dados ficaram salvos dentro dessa classe.
      */
@@ -23,15 +42,15 @@ public class Main
         aves = new Ave[10];
         for(int i = 0; i < 10; i++) {
 
-            aves[i] = new Ave(nomesCientificos[i], sizePassaro[i]);
+            aves[i] = new Ave(nomesCientificos[i], sizePassaro[i],colorPassaro[i],habitatPassaro[i], genderPassaro[i],namePhoto[i]);
 
         }
         
         for (int j = 0; j < 10; j++){
 
-            System.out.printf("%s%d%n", aves[j].getName(),aves[j].getSize());
+            System.out.printf("%s  %d  %s  %s  %s  %s %n", aves[j].getName(),aves[j].getSize(), aves[j].getColor(),aves[j].getHabitat(),aves[j].getGender(),aves[j].getNamephoto());
 
-            System.out.printf("%s%n", aves[j].getName());
+           
 
         }
     }
