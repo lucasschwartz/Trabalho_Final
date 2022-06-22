@@ -10,7 +10,7 @@ public class Anotacoes
     public int dia;
     
     /**
-     * Constructor for objects of class Anotacoes
+     *  Lugar para definir a data
      */
     public Anotacoes(int dia)
     {
@@ -18,7 +18,7 @@ public class Anotacoes
     }
     
     /**
-     *  Lugar para definir a data
+     *  
      */
     public void Data()
     {
