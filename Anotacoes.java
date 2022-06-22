@@ -30,4 +30,8 @@ public class Anotacoes
         return this.data;
     }
     
+    public String toString(){
+        return data + " "+ horario +" "+ local +" "+ passaro.getName()+" "+ passaro.getSize()+" "+ passaro.getColor()+" "+ passaro.getHabitat()+" "+ passaro.getGender()+" "+ passaro.getNamephoto();
+    }
+    
 }

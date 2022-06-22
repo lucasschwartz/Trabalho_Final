@@ -43,21 +43,25 @@ public class Main
             Scanner sc = new Scanner(System.in);
             Ave aves[];
             aves = new Ave[10];
+            Anotacoes anotacoes[] = new Anotacoes[100];
+            int countAnotacoes = 0;
             int number = 1, option = 1, numbering = 0;
             
             for(int i = 0; i < 10; i++) {
                 aves[i] = new Ave(nomesCientificos[i], sizePassaro[i]);
             }
-            
+            // FAZER UM WHILE A PARTIR DAQUI PRO PROGRAMA CONTINUAR RODANDO ATÉ A CONDIÇÃO 0!!!
             // Inicio do menu
             System.out.printf("\f");
             System.out.printf("MENU %n");
             System.out.printf("1 - Acessar Catálogo%n");
             System.out.printf("2 - Pesquisar no Catálogo%n");
-            System.out.printf("3 - Anotações%n");
+            System.out.printf("3 - Criar Anotações%n");
+            System.out.printf("4 - Acessar Anotações%n");
             System.out.printf("0 - Sair%n");
             option = sc.nextInt();
             System.out.printf("\f");
+                        
         
             switch(option) {
                 case 1: 
@@ -74,7 +78,27 @@ public class Main
                     System.out.println("Tamo trabalhando nisso");
                     break;
                 case 3:
-                    System.out.println("Tamo trabalhando nisso");
+                    System.out.println("Insira a data");
+                    String data = sc.nextLine();
+                    System.out.println("Insira o horario");
+                    String horario = sc.nextLine();
+                    System.out.println("Insira o local");
+                    String local = sc.nextLine();
+                    System.out.println("Insira o passaro");
+                    String nome = sc.nextLine();
+                    Ave aux = null;
+                    for(int i = 0; i < aves.length; i++){
+                        if(nome.equalsIgnoreCase(aves[i].getName()))
+                            aux = aves[i];
+                    }
+                    anotacoes[countAnotacoes] = new Anotacoes(data, horario, local, aux);
+                    countAnotacoes++;
+                    break;
+                case 4:
+                    for(int i = 0; i < countAnotacoes; i++) {
+                        System.out.println(anotacoes[i].toString());
+                    }
+                    
                     break;
                 }
             //Fim do menu
