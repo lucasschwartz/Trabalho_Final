@@ -7,26 +7,27 @@ import java.util.Scanner;
  */
 public class Anotacoes
 {
-    public int dia;
-    public int mes;
-    public int ano;
+    public String data;
+    public String horario;
+    public String local;
+    public Ave passaro;
     
     /**
      *  Lugar para definir a data
      */
-    public Anotacoes(int dia, int mes, int ano)
+    public Anotacoes(String data, String horario, String local, Ave passaro)
     {
-        this.dia = dia;
-        this.mes = mes;
-        this.ano = ano;
+        this.data = data;
+        this.horario = horario;
+        this.local = local;
+        this.passaro = passaro;
     }
     
     /**
      *  
      */
-    public void Data()
-    {
-        
+    public String getData(){
+        return this.data;
     }
     
 }

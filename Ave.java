@@ -21,7 +21,7 @@ public class Ave
     }
 
     /**
-     *  Passa o nomme do Passaro (cientifico)
+     *  Passa o nome do Passaro (cientifico)
      */
     public String getName(){
         return this.name;
