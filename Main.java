@@ -17,14 +17,14 @@ public class Main
      */
     public static void main()
     {
-        Ave c[];
-        c = new Ave[10];
+        Ave aves[];
+        aves = new Ave[10];
         for(int i = 0; i < 10; i++) {
-            c[i] = new Ave(nomesCientificos[i]);
+            aves[i] = new Ave(nomesCientificos[i]);
         }
         
         for (int j = 0; j < 10; j++){
-            System.out.printf("%s%n", c[j].getNome());
+            System.out.printf("%s%n", aves[j].getNome());
         }
     }
 }
