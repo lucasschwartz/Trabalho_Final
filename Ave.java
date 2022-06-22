@@ -1,57 +1,48 @@
 public class Ave
 {
-    String nome; // decidir se devemos fazer mais de uma variavel para nome
+    String name; // decidir se devemos fazer mais de uma variavel para name
     int size; // Tamanho do passaro
     String color; // Cor predominante do passsaro
     String habitat; // Habitat do passaro 
     String gender; // Genero M ou F
-    String namephoto; // Nome do fotagrafo que tirou a foto
+    String namephoto; // name do fotagrafo que tirou a foto
 
     /**
      * Constructor for objects of class Avianos
      */
-    public Ave(String nome)
+    public Ave(String name,int size, String color, String habitat)
     {
-        this.nome = nome;
-
-    }
-
-    public String getNome(){
-        return this.nome;
+        this.name = name;
+        this.size = size;
+        this.color = color;
+        this.habitat = habitat;
     }
 
     /**
-     * Campo para definir o tamanho do passaro 
+     *  Passa o nomme do Passaro (cientifico)
      */
-    public void AveSize(int size){
-        this.size = size;
+    public String getName(){
+        return this.name;
     }
 
+    /**
+     * Passa o tamanho do passaro em centimentros
+     */
     public int getSize(){
         return this.size;
     }
 
     /**
-     * Campo para definir a cor predominante do passaro
+     * Passa a cor predominante do passaro
      */
-    public void AveColor(String color)
-    {
-        this.color = color;
-
-    }
 
     public String getColor(){
         return this.color;
     }
 
     /**
-     * Campo para definir o habitat do passaro
+     * Passa o habitat do passaro
      */
-    public void AveHabitat(String habitat)
-    {
-        this.habitat = habitat;
-
-    }
 
     public String getHabitat(){
         return this.habitat;
@@ -71,7 +62,7 @@ public class Ave
     }
 
     /**
-     * Campo para definir o nome do fotografo
+     * Campo para definir o name do fotografo
      */
     public void AveNamephoto(String namephoto)
     {

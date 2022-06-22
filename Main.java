@@ -11,6 +11,8 @@ public class Main
            "Columbina picui", "Gubernetes yetapa", "Xolmis cinereus",
            "Griseotyrannus aurantioatrocristatus", "Prognet tapera", "Suiriri suiriri", 
            "Pyrocephalus runinus"};
+    public static int sizePassaro[] = { 10, 15,10,16,17,1,2,3,4,5          
+    };
     
     /**
      * Dados ficaram salvos dentro dessa classe.
@@ -20,11 +22,13 @@ public class Main
         Ave c[];
         c = new Ave[10];
         for(int i = 0; i < 10; i++) {
-            c[i] = new Ave(nomesCientificos[i]);
+            c[i] = new Ave(nomesCientificos[i], sizePassaro[i]);
         }
         
         for (int j = 0; j < 10; j++){
-            System.out.printf("%s%n", c[j].getNome());
+            System.out.printf("%s%d%n", c[j].getNome(),c[j].getSize());
         }
     }
+    
+    
 }
