@@ -1,9 +1,8 @@
 import java.util.Scanner;
     /**
-     * Write a description of class Main here.
+     * Aqui foi onde tudo começou...
      *
-     * @author (your name)
-     * @version (a version number or a date)
+     * @Gabriel @Hélio @Lavínia @Lucas @Matheus
      */
 public class Main
 {
@@ -13,7 +12,7 @@ public class Main
                 "Pyrocephalus runinus"};
     
      
-        public static int sizePassaro[] = { 10, 15, 10, 16, 17, 1, 2, 3, 4, 5};
+        public static int sizePassaro[] = {10, 15, 10, 16, 17, 1, 2, 3, 4, 5};
     
         public static String colorPassaro[] = {"azuro", "Pata", "Zenaa", 
                 "Ci", "Guberpa", "Xolmeus",
@@ -36,36 +35,22 @@ public class Main
                 " rus"};
         /**
          * Dados ficaram salvos dentro dessa classe.
+         * Aqui ficará o Menu(por enquanto).
          */
-        /*public static void main()
-        {
-        Ave aves[];
-        aves = new Ave[10];
-        for(int i = 0; i < 10; i++) {
-    
-        aves[i] = new Ave(nomesCientificos[i], sizePassaro[i],colorPassaro[i],habitatPassaro[i], genderPassaro[i],namePhoto[i]);
-    
-        }
-    
-        for (int j = 0; j < 10; j++){
-    
-        System.out.printf("%s  %d  %s  %s  %s  %s %n", aves[j].getName(),aves[j].getSize(), aves[j].getColor(),aves[j].getHabitat(),aves[j].getGender(),aves[j].getNamephoto());
-    
-    
-        }
-        }*/
-    
+
         public static void main(String[]args)
         {
             Scanner sc = new Scanner(System.in);
             Ave aves[];
             aves = new Ave[10];
-            int number = 1, option = 1;
+            int number = 1, option = 1, numbering = 0;
+            
             for(int i = 0; i < 10; i++) {
                 aves[i] = new Ave(nomesCientificos[i], sizePassaro[i]);
             }
             
             // Inicio do menu
+            System.out.printf("\f");
             System.out.printf("MENU %n");
             System.out.printf("1 - Acessar Catálogo%n");
             System.out.printf("2 - Pesquisar no Catálogo%n");
@@ -76,57 +61,22 @@ public class Main
         
             switch(option) {
                 case 1: 
-                while(number != 0) {
                     System.out.println("Informe o Pássaro");
                     for(int i = 0; i < 10; i++) {
-                        int numeracao = 1;
-                        System.out.printf("%d - %s %n",numeracao, aves[i].getName());
-                        numeracao++;
+                        System.out.printf("%d - %s %n",numbering, aves[i].getName());
+                        numbering++;
                     }
                     number = sc.nextInt();
-                }
+                    System.out.printf("Nome: %s%nTamanho: %s%nCor: %s%n Habitat: %s%nGênero: %s%n Foto: %s  %n", aves[number].getName(), aves[number].getSize(), aves[number].getColor(), aves[number].getHabitat(), aves[number].getGender(), aves[number].getNamephoto());
+                
                     break;
                 case 2:
-                    System.out.println("Em obras");
+                    System.out.println("Tamo trabalhando nisso");
                     break;
                 case 3:
-                    System.out.println("Em obras");
+                    System.out.println("Tamo trabalhando nisso");
                     break;
                 }
             //Fim do menu
     }
 }
-
-/*switch (number) {
-case 1:
-System.out.printf("%s  %s   %n", aves[0].getName(),aves[0].getSize());
-break;
-case 2:
-System.out.printf("%s  %s   %n", aves[1].getName(),aves[1].getSize());
-break;
-case 3:
-System.out.printf("%s  %s   %n", aves[2].getName(),aves[2].getSize());
-break;
-case 4:
-System.out.printf("%s  %s   %n", aves[3].getName(),aves[3].getSize());
-break;
-case 5:
-System.out.printf("%s  %s   %n", aves[4].getName(),aves[4].getSize());
-break;
-case 6:
-System.out.printf("%s  %s   %n", aves[5].getName(),aves[5].getSize());
-break;
-case 7:
-System.out.printf("%s  %s   %n", aves[6].getName(),aves[6].getSize());
-break;
-case 8:
-System.out.printf("%s  %s   %n", aves[7].getName(),aves[7].getSize());
-break;
-case 9:
-                    System.out.printf("%s  %s   %n", aves[8].getName(),aves[8].getSize());
-                    break;
-                case 10:
-                    System.out.printf("%s  %s   %n", aves[9].getName(),aves[9].getSize());
-                    break;
-
-            }*/
