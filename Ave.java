@@ -10,12 +10,14 @@ public class Ave
     /**
      * Constructor for objects of class Avianos
      */
-    public Ave(String name,int size)
+    public Ave(String name,int size, String color, String habitat, String gender, String namephoto)
     {
         this.name = name;
         this.size = size;
         this.color = color;
         this.habitat = habitat;
+        this.gender = gender;
+        this.namephoto = namephoto; 
     }
 
     /**
@@ -49,27 +51,16 @@ public class Ave
     }
 
     /**
-     * Campo para definir o genero do passaro
+     * Passa o genero do passaro
      */
-    public void AveGender(String gender)
-    {
-        this.gender = gender;
-
-    }
-
     public String getGender(){
         return this.gender;
     }
 
     /**
-     * Campo para definir o name do fotografo
+     * Passa o name do fotografo
      */
-    public void AveNamephoto(String namephoto)
-    {
-        this.namephoto = namephoto;
-
-    }
-
+    
     public String getNamephoto(){
         return this.namephoto;
     }
