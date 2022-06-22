@@ -45,5 +45,5 @@ target3.name=Main
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=120
-target3.x=210
-target3.y=10
+target3.x=290
+target3.y=50
