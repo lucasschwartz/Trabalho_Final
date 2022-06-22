@@ -10,7 +10,7 @@ public class Ave
     /**
      * Constructor for objects of class Avianos
      */
-    public Ave(String name,int size, String color, String habitat, String gender, String namephoto)
+    public Ave(String name,int size/*, String color, String habitat, String gender, String namephoto*/)
     {
         this.name = name;
         this.size = size;
