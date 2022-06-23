@@ -1,7 +1,7 @@
 public class Ave
 {
-    String name; // decidir se devemos fazer mais de uma variavel para name
-    int size; // Tamanho do passaro
+    String name; // Nome do Passaro
+    String size; // Tamanho do passaro
     String color; // Cor predominante do passsaro
     String habitat; // Habitat do passaro 
     String gender; // Genero M ou F
@@ -10,7 +10,7 @@ public class Ave
     /**
      * Constructor for objects of class Avianos
      */
-    public Ave(String name,int size/*, String color, String habitat, String gender, String namephoto*/)
+    public Ave(String name,String size, String color, String habitat, String gender, String namephoto)
     {
         this.name = name;
         this.size = size;
@@ -30,7 +30,7 @@ public class Ave
     /**
      * Passa o tamanho do passaro em centimentros
      */
-    public int getSize(){
+    public String getSize(){
         return this.size;
     }
 

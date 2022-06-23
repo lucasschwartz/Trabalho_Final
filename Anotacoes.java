@@ -25,7 +25,7 @@ public class Anotacoes
     }
     
     /**
-     *  Passa a dada de uma determinada anotação
+     *  Passa a data de uma determinada anotação
      */
     public String getData(){
         return this.data;

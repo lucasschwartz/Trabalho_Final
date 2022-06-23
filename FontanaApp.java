@@ -4,7 +4,7 @@ import java.util.Scanner;
      *
      * @Gabriel @Hélio @Lavínia @Lucas @Matheus
      */
-public class Main
+public class FontanaApp
 {
         public static String nomesCientificos[] = {"Patagioenas picazuro", "Patagioenas maculosa", "Zenaida auriculata", 
                 "Columbina picui", "Gubernetes yetapa", "Xolmis cinereus",
@@ -12,7 +12,7 @@ public class Main
                 "Pyrocephalus runinus"};
     
      
-        public static int sizePassaro[] = {10, 15, 10, 16, 17, 1, 2, 3, 4, 5};
+        public static String sizePassaro[] = {"10", "15", "10", "16", "17", "1", "2", "3", "4", "5"};
     
         public static String colorPassaro[] = {"azuro", "Pata", "Zenaa", 
                 "Ci", "Guberpa", "Xolmeus",
@@ -47,8 +47,9 @@ public class Main
             int countAnotacoes = 0;
             int number = 1, option = 1, numbering = 0;
             
+            
             for(int i = 0; i < 10; i++) {
-                aves[i] = new Ave(nomesCientificos[i], sizePassaro[i]);
+                aves[i] = new Ave(nomesCientificos[i], sizePassaro[i],colorPassaro[i],habitatPassaro[i], genderPassaro[i], namePhoto[i]);
             }
             
             // FAZER UM WHILE A PARTIR DAQUI PRO PROGRAMA CONTINUAR RODANDO ATÉ A CONDIÇÃO 0!!!
