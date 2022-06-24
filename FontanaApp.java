@@ -71,7 +71,7 @@ public class FontanaApp
                         numbering++;
                     }
                     number = sc.nextInt();
-                    System.out.printf("Nome: %s%nTamanho: %s%nCor: %s%n Habitat: %s%nGênero: %s%n Foto: %s  %n", aves[number].getName(), aves[number].getSize(), aves[number].getColor(), aves[number].getHabitat(), aves[number].getGender(), aves[number].getNamephoto());
+                    System.out.printf("Nome: %s%nTamanho: %s%nCor: %s%nHabitat: %s%nGênero: %s%nFoto: %s  %n", aves[number].getName(), aves[number].getSize(), aves[number].getColor(), aves[number].getHabitat(), aves[number].getGender(), aves[number].getNamephoto());
                 
                     break;
                 case 2:
