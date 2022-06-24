@@ -12,7 +12,7 @@ public class FontanaApp
                 "Pyrocephalus runinus"};
     
      
-        public static String sizePassaro[] = {"10", "15", "10", "16", "17", "1", "2", "3", "4", "5"};
+        public static String sizePassaro[] = {"24", "35", "22", "15", "40", "20", "18", "16", "13", "13"};
     
         public static String colorPassaro[] = {"Cinza", "Cinza", "Cinza", "Cinza", "Cinza", 
                                                 "Cinza", "Cinza", "Cinza", "Cinza", "Cinza"};
