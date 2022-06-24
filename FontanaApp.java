@@ -24,10 +24,10 @@ public class FontanaApp
     
         public static String genderPassaro[] = {"M", "F", "J"};
     
-        public static String namePhoto[] = {"Pro", "Pataga", "Zta", 
-                "Cicui", "Gupa", "Xeus",
-                "Gatus", "Pra", "Sui si", 
-                " rus"};
+        public static String namePhoto[] = {"E. Chiarani", "M.Repenning", "C. Beier", 
+                "M.Repenning", "C.B. Andretti", "M. Bettio",
+                "E.Chiarani", "E.Chiarani", "M.Repenning", 
+                "E.Chiarani"};
         /**
          * Dados ficaram salvos dentro dessa classe.
          * Aqui ficará o Menu(por enquanto).
