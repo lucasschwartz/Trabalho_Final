@@ -1,40 +1,31 @@
 import java.util.Scanner;
-    /**
-     * Aqui foi onde tudo começou...
-     *
-     * @Gabriel @Hélio @Lavínia @Lucas @Matheus
-     */
+
+/**
+ * Aqui foi onde tudo começou...
+ *
+ * @Gabriel @Hélio @Lavínia @Lucas @Matheus
+ */
 public class FontanaApp
 {
-        public static String nomesCientificos[] = {"Patagioenas picazuro", "Patagioenas maculosa", "Zenaida auriculata", 
-                "Columbina picui", "Gubernetes yetapa", "Xolmis cinereus",
-                "Griseotyrannus aurantioatrocristatus", "Prognet tapera", "Suiriri suiriri", 
-                "Pyrocephalus runinus"};
-    
-     
-        public static String sizePassaro[] = {"24", "35", "22", "15", "40", "20", "18", "16", "13", "13"};
-    
-        public static String colorPassaro[] = {"Cinza", "Cinza", "Cinza", "Cinza", "Cinza", 
-                                                "Cinza", "Cinza", "Cinza", "Cinza", "Cinza"};
-    
-        public static String habitatPassaro[] = {"Diversos", "Campo com arvores", "Diversos", 
-                "Campo seco alto/campo com arvores", "Campo seco alto/banhado com vegetaçao", "Campo seco alto/campo com arvores",
-                "Campo com arvores", "Diversos", "Diversos", 
-                "Campo seco baixo/campo com arvores"};
-    
-        public static String genderPassaro[] = {"Filhote/nao identificavel", "Filhote/nao identificavel",
+    public static String nomesCientificos[] = {"Patagioenas picazuro", "Patagioenas maculosa", "Zenaida auriculata", 
+            "Columbina picui", "Gubernetes yetapa", "Xolmis cinereus",
+            "Griseotyrannus aurantioatrocristatus", "Prognet tapera", "Suiriri suiriri", 
+            "Pyrocephalus runinus"};
+
+    public static String sizePassaro[] = {"24", "35", "22", "15", "40", "20", "18", "16", "13", "13"};
+    public static String colorPassaro[] = {"Cinza", "Cinza", "Cinza", "Cinza", "Cinza", 
+            "Cinza", "Cinza", "Cinza", "Cinza", "Cinza"};
+
+    public static String habitatPassaro[] = {"Diversos", "Campo com arvores", "Diversos", 
+            "Campo seco alto/campo com arvores", "Campo seco alto/banhado com vegetaçao", "Campo seco alto/campo com arvores",
+            "Campo com arvores", "Diversos", "Diversos", 
+            "Campo seco baixo/campo com arvores"};
+
+    public static String genderPassaro[] = {"Filhote/nao identificavel", "Filhote/nao identificavel",
             "Filhote/nao identificavel", "Filhote/nao identificavel","Filhote/nao identificavel", "Filhote/nao identificavel",
             "Filhote/nao identificavel","Filhote/nao identificavel","Filhote/nao identificavel", "Femea"};
-    
-        public static String namePhoto[] = {"E. Chiarani", "M.Repenning", "C. Beier", 
-                "M.Repenning", "C.B. Andretti", "M. Bettio",
-                "E.Chiarani", "E.Chiarani", "M.Repenning", 
-                "E.Chiarani"};
-        /**
-         * Dados ficaram salvos dentro dessa classe.
-         * Aqui ficará o Menu(por enquanto).
-         */
 
+<<<<<<< HEAD
         public static void main(String[]args)
         {
             Scanner sc = new Scanner(System.in);
@@ -52,6 +43,36 @@ public class FontanaApp
             // FAZER UM WHILE A PARTIR DAQUI PRO PROGRAMA CONTINUAR RODANDO ATÉ A CONDIÇÃO 0!!!
             
             // Inicio do menu
+=======
+    public static String namePhoto[] = {"E. Chiarani", "M.Repenning", "C. Beier", 
+            "M.Repenning", "C.B. Andretti", "M. Bettio",
+            "E.Chiarani", "E.Chiarani", "M.Repenning", 
+            "E.Chiarani"};
+    /**
+     * Dados ficaram salvos dentro dessa classe.
+     * Aqui ficará o Menu(por enquanto).
+     */
+
+    public static void main(String[]args)
+    {
+        Scanner sc = new Scanner(System.in);
+        Ave aves[];
+        aves = new Ave[10];
+        Anotacoes anotacoes[] = new Anotacoes[100];
+        int countAnotacoes = 0;
+        int number = 1, option = 1, numbering = 0;
+
+        for(int i = 0; i < 10; i++) {
+            aves[i] = new Ave(nomesCientificos[i], sizePassaro[i],colorPassaro[i],habitatPassaro[i], genderPassaro[i], 
+                namePhoto[i]);
+        }
+
+        // FAZER UM WHILE A PARTIR DAQUI PRO PROGRAMA CONTINUAR RODANDO ATÉ A CONDIÇÃO 0!!!
+        // Inicio do menu
+        String k = "N";
+        while (!(k.equals("S"))) {
+
+>>>>>>> 7af77553fb02f40752c607a6878f8cafbbdbc477
             System.out.printf("\f");
             System.out.printf("MENU %n");
             System.out.printf("1 - Acessar Catálogo%n");
@@ -61,9 +82,10 @@ public class FontanaApp
             System.out.printf("0 - Sair%n");
             option = sc.nextInt();
             System.out.printf("\f");
-                        
-        
+
             switch(option) {
+                case 0:
+                    break;
                 case 1: 
                     System.out.println("Informe o Pássaro");
                     for(int i = 0; i < 10; i++) {
@@ -72,7 +94,7 @@ public class FontanaApp
                     }
                     number = sc.nextInt();
                     System.out.printf("Nome: %s%nTamanho: %s%nCor: %s%nHabitat: %s%nGênero: %s%nFoto: %s  %n", aves[number].getName(), aves[number].getSize(), aves[number].getColor(), aves[number].getHabitat(), aves[number].getGender(), aves[number].getNamephoto());
-                
+
                     break;
                 case 2:
                     System.out.println("Tamo trabalhando nisso");
@@ -119,9 +141,12 @@ public class FontanaApp
                     /*for(int i = 0; i < countAnotacoes; i++) {
                         System.out.println(anotacoes[i].toString());*/
                     }
-                    
                     break;
-                }
-            //Fim do menu
+            }
+            System.out.println("\nSair? (S / N)");
+            k = (sc.next()).toUpperCase(); 
+        }
+        //Fim do menu
+        System.out.println("Programa encerrado");
     }
 }
