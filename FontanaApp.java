@@ -17,10 +17,10 @@ public class FontanaApp
         public static String colorPassaro[] = {"Cinza", "Cinza", "Cinza", "Cinza", "Cinza", 
                                                 "Cinza", "Cinza", "Cinza", "Cinza", "Cinza"};
     
-        public static String habitatPassaro[] = {"Pro", "Pataga", "Zta", 
-                "Cicui", "Gupa", "Xeus",
-                "Gatus", "Pra", "Sui si", 
-                " rus"};
+        public static String habitatPassaro[] = {"Diversos", "Campo com arvores", "Diversos", 
+                "Campo seco alto/campo com arvores", "Campo seco alto/banhado com vegetaçao", "Campo seco alto/campo com arvores",
+                "Campo com arvores", "Diversos", "Diversos", 
+                "Campo seco baixo/campo com arvores"};
     
         public static String genderPassaro[] = {"M", "F", "J"};
     
