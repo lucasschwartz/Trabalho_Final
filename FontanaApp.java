@@ -14,20 +14,15 @@ public class FontanaApp
      
         public static String sizePassaro[] = {"10", "15", "10", "16", "17", "1", "2", "3", "4", "5"};
     
-        public static String colorPassaro[] = {"azuro", "Pata", "Zenaa", 
-                "Ci", "Guberpa", "Xolmeus",
-                "Griistatus", "Prra", "Siri", 
-                "Pus"};
+        public static String colorPassaro[] = {"Cinza", "Cinza", "Cinza", "Cinza", "Cinza", 
+                                                "Cinza", "Cinza", "Cinza", "Cinza", "Cinza"};
     
         public static String habitatPassaro[] = {"Pro", "Pataga", "Zta", 
                 "Cicui", "Gupa", "Xeus",
                 "Gatus", "Pra", "Sui si", 
                 " rus"};
     
-        public static String genderPassaro[] = {"M", "a", "ta", 
-                "Ci", "pa", "Xus",
-                "Gs", "Pa", "Si i", 
-                " rs"};
+        public static String genderPassaro[] = {"M", "F", "J"};
     
         public static String namePhoto[] = {"Pro", "Pataga", "Zta", 
                 "Cicui", "Gupa", "Xeus",
