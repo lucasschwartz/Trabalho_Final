@@ -42,7 +42,7 @@ public class FontanaApp
             aves = new Ave[10];
             Anotacoes anotacoes[] = new Anotacoes[100];
             int countAnotacoes = 0;
-            int number = 1, option = 1, numbering = 0;
+            int number = 1, option = 1, option2 = 0, numbering = 0;
             
             
             for(int i = 0; i < 10; i++) {
@@ -95,8 +95,29 @@ public class FontanaApp
                     countAnotacoes++;
                     break;
                 case 4:
-                    for(int i = 0; i < countAnotacoes; i++) {
-                        System.out.println(anotacoes[i].toString());
+                    System.out.printf("Como Gostaria de Pesquisar?%n");
+                    System.out.printf("1 - Acessar por Mes%n");
+                    System.out.printf("2 - Acessar por %n");
+                    System.out.printf("3 - Acessar Todas as Anotações%n");
+                    option2 = sc.nextInt();
+                    
+                    switch(option2){
+                        case 1:
+                            
+                        System.out.printf("Qual o Mes?");
+                            int mes = sc.newInt();
+                            
+                            
+                        
+                        
+                        
+                        case 2:
+                            
+                    }
+                    
+                    
+                    /*for(int i = 0; i < countAnotacoes; i++) {
+                        System.out.println(anotacoes[i].toString());*/
                     }
                     
                     break;
