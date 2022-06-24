@@ -32,7 +32,7 @@ public class Anotacoes
     }
     
     public String toString(){
-        return this.data + " "+ this.horario +" "+ this.local +" "+ passaro.getName()+" "+ passaro.getSize()+" "+ passaro.getColor()+" "+ passaro.getHabitat()+" "+ passaro.getGender()+" "+ passaro.getNamephoto();
+        return data + " "+ horario +" "+ local +" "+ passaro.getName()+" "+ passaro.getSize()+" "+ passaro.getColor()+" "+ passaro.getHabitat()+" "+ passaro.getGender()+" "+ passaro.getNamephoto();
     }
     
 }
