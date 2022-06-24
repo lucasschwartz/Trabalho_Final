@@ -22,12 +22,14 @@ public class FontanaApp
                 "Campo com arvores", "Diversos", "Diversos", 
                 "Campo seco baixo/campo com arvores"};
     
-        public static String genderPassaro[] = {"M", "F", "J"};
+        public static String genderPassaro[] = {"Filhote/nao identificavel", "Filhote/nao identificavel",
+            "Filhote/nao identificavel", "Filhote/nao identificavel","Filhote/nao identificavel", "Filhote/nao identificavel",
+            "Filhote/nao identificavel","Filhote/nao identificavel","Filhote/nao identificavel", "Femea"};
     
-        public static String namePhoto[] = {"Pro", "Pataga", "Zta", 
-                "Cicui", "Gupa", "Xeus",
-                "Gatus", "Pra", "Sui si", 
-                " rus"};
+        public static String namePhoto[] = {"E. Chiarani", "M.Repenning", "C. Beier", 
+                "M.Repenning", "C.B. Andretti", "M. Bettio",
+                "E.Chiarani", "E.Chiarani", "M.Repenning", 
+                "E.Chiarani"};
         /**
          * Dados ficaram salvos dentro dessa classe.
          * Aqui ficará o Menu(por enquanto).
@@ -69,7 +71,7 @@ public class FontanaApp
                         numbering++;
                     }
                     number = sc.nextInt();
-                    System.out.printf("Nome: %s%nTamanho: %s%nCor: %s%n Habitat: %s%nGênero: %s%n Foto: %s  %n", aves[number].getName(), aves[number].getSize(), aves[number].getColor(), aves[number].getHabitat(), aves[number].getGender(), aves[number].getNamephoto());
+                    System.out.printf("Nome: %s%nTamanho: %s%nCor: %s%nHabitat: %s%nGênero: %s%nFoto: %s  %n", aves[number].getName(), aves[number].getSize(), aves[number].getColor(), aves[number].getHabitat(), aves[number].getGender(), aves[number].getNamephoto());
                 
                     break;
                 case 2:
