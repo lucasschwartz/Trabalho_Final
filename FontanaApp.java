@@ -22,7 +22,9 @@ public class FontanaApp
                 "Campo com arvores", "Diversos", "Diversos", 
                 "Campo seco baixo/campo com arvores"};
     
-        public static String genderPassaro[] = {"M", "F", "J"};
+        public static String genderPassaro[] = {"Filhote/nao identificavel", "Filhote/nao identificavel",
+            "Filhote/nao identificavel", "Filhote/nao identificavel","Filhote/nao identificavel", "Filhote/nao identificavel",
+            "Filhote/nao identificavel","Filhote/nao identificavel","Filhote/nao identificavel", "Femea"};
     
         public static String namePhoto[] = {"E. Chiarani", "M.Repenning", "C. Beier", 
                 "M.Repenning", "C.B. Andretti", "M. Bettio",
