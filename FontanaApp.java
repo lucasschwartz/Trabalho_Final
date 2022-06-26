@@ -1,10 +1,12 @@
 import java.util.Scanner;
 
-/**
- * Aqui foi onde tudo começou...
- *
- * @Gabriel @Hélio @Lavínia @Lucas @Matheus
- */
+/**  
+* Dados ficaram salvos dentro dessa classe.
+* Aqui ficará o Menu(por enquanto).
+* @Gabriel @Hélio @Lavínia @Lucas @Matheus
+*/
+  
+ 
 public class FontanaApp
 {
     public static String nomesCientificos[] = {"Patagioenas picazuro", "Patagioenas maculosa", "Zenaida auriculata", 
@@ -25,34 +27,11 @@ public class FontanaApp
             "Filhote/nao identificavel", "Filhote/nao identificavel","Filhote/nao identificavel", "Filhote/nao identificavel",
             "Filhote/nao identificavel","Filhote/nao identificavel","Filhote/nao identificavel", "Femea"};
 
-<<<<<<< HEAD
-        public static void main(String[]args)
-        {
-            Scanner sc = new Scanner(System.in);
-            Ave aves[];
-            aves = new Ave[10];
-            Anotacoes anotacoes[] = new Anotacoes[100];
-            int countAnotacoes = 0;
-            int number = 1, option = 1, option2 = 0, numbering = 0;
-            
-            
-            for(int i = 0; i < 10; i++) {
-                aves[i] = new Ave(nomesCientificos[i], sizePassaro[i],colorPassaro[i],habitatPassaro[i], genderPassaro[i], namePhoto[i]);
-            }
-            
-            // FAZER UM WHILE A PARTIR DAQUI PRO PROGRAMA CONTINUAR RODANDO ATÉ A CONDIÇÃO 0!!!
-            
-            // Inicio do menu
-=======
     public static String namePhoto[] = {"E. Chiarani", "M.Repenning", "C. Beier", 
-            "M.Repenning", "C.B. Andretti", "M. Bettio",
-            "E.Chiarani", "E.Chiarani", "M.Repenning", 
-            "E.Chiarani"};
-    /**
-     * Dados ficaram salvos dentro dessa classe.
-     * Aqui ficará o Menu(por enquanto).
-     */
-
+                "M.Repenning", "C.B. Andretti", "M. Bettio",
+                "E.Chiarani", "E.Chiarani", "M.Repenning", 
+                "E.Chiarani"};
+                
     public static void main(String[]args)
     {
         Scanner sc = new Scanner(System.in);
@@ -60,19 +39,18 @@ public class FontanaApp
         aves = new Ave[10];
         Anotacoes anotacoes[] = new Anotacoes[100];
         int countAnotacoes = 0;
-        int number = 1, option = 1, numbering = 0;
-
+        int number = 1, option = 1, option2 = 0, numbering = 0;
+        
         for(int i = 0; i < 10; i++) {
-            aves[i] = new Ave(nomesCientificos[i], sizePassaro[i],colorPassaro[i],habitatPassaro[i], genderPassaro[i], 
-                namePhoto[i]);
-        }
-
+                aves[i] = new Ave(nomesCientificos[i], sizePassaro[i],colorPassaro[i],habitatPassaro[i], genderPassaro[i], namePhoto[i]);
+            }
+            
         // FAZER UM WHILE A PARTIR DAQUI PRO PROGRAMA CONTINUAR RODANDO ATÉ A CONDIÇÃO 0!!!
+            
+        
         // Inicio do menu
         String k = "N";
         while (!(k.equals("S"))) {
-
->>>>>>> 7af77553fb02f40752c607a6878f8cafbbdbc477
             System.out.printf("\f");
             System.out.printf("MENU %n");
             System.out.printf("1 - Acessar Catálogo%n");
@@ -93,6 +71,7 @@ public class FontanaApp
                         numbering++;
                     }
                     number = sc.nextInt();
+                    System.out.printf("\f");
                     System.out.printf("Nome: %s%nTamanho: %s%nCor: %s%nHabitat: %s%nGênero: %s%nFoto: %s  %n", aves[number].getName(), aves[number].getSize(), aves[number].getColor(), aves[number].getHabitat(), aves[number].getGender(), aves[number].getNamephoto());
 
                     break;
@@ -110,8 +89,9 @@ public class FontanaApp
                     String nome = sc.next();
                     Ave aux = null;
                     for(int i = 0; i < aves.length; i++){
-                        if(nome.equalsIgnoreCase(aves[i].getName()))
+                        if(nome.equalsIgnoreCase(aves[i].getName())){
                             aux = aves[i];
+                        }
                     }
                     anotacoes[countAnotacoes] = new Anotacoes(data, horario, local, aux);
                     countAnotacoes++;
@@ -123,30 +103,23 @@ public class FontanaApp
                     System.out.printf("3 - Acessar Todas as Anotações%n");
                     option2 = sc.nextInt();
                     
-                    switch(option2){
+                    /*switch(option2){
                         case 1:
                             
                         System.out.printf("Qual o Mes?");
                             int mes = sc.newInt();
-                            
-                            
-                        
-                        
-                        
                         case 2:
                             
                     }
-                    
-                    
                     /*for(int i = 0; i < countAnotacoes; i++) {
                         System.out.println(anotacoes[i].toString());*/
-                    }
                     break;
-            }
+            }   
+            numbering = 0;
             System.out.println("\nSair? (S / N)");
-            k = (sc.next()).toUpperCase(); 
+            k = (sc.next()).toUpperCase();
+        }
+            System.out.println("Programa encerrado");
         }
         //Fim do menu
-        System.out.println("Programa encerrado");
     }
-}
