@@ -8,28 +8,29 @@ import java.util.Scanner;
 
 public class FontanaApp
 {
-    public static String nomesCientificos[] = {"Patagioenas picazuro", "Patagioenas maculosa", "Zenaida auriculata", 
-            "Columbina picui", "Gubernetes yetapa", "Xolmis cinereus",
+    public static String nomesCientificos[] = {"Patagioenas picazuro", "Patagioenas maculosa", 
+            "Zenaida auriculata", "Columbina picui", "Gubernetes yetapa", "Xolmis cinereus",
             "Griseotyrannus aurantioatrocristatus", "Prognet tapera", "Suiriri suiriri", 
             "Pyrocephalus runinus"};
 
     public static String sizePassaro[] = {"24", "35", "22", "15", "40", "20", "18", "16", "13", "13"};
+    
     public static String colorPassaro[] = {"Cinza", "Cinza", "Cinza", "Cinza", "Cinza", 
-            "Cinza", "Cinza", "Cinza", "Cinza", "Cinza"};
+                                           "Cinza", "Cinza", "Cinza", "Cinza", "Cinza"};
 
-    public static String habitatPassaro[] = {"Diversos", "Campo com arvores", "Diversos", 
-            "Campo seco alto/campo com arvores", "Campo seco alto/banhado com vegetaçao", "Campo seco alto/campo com arvores",
-            "Campo com arvores", "Diversos", "Diversos", 
+    public static String habitatPassaro[] = {"Diversos", "Campo com arvores", "Diversos",
+            "Campo seco alto/campo com arvores", "Campo seco alto/banhado com vegetaçao",
+            "Campo seco alto/campo com arvores", "Campo com arvores", "Diversos", "Diversos", 
             "Campo seco baixo/campo com arvores"};
 
-    public static String genderPassaro[] = {"Filhote/nao identificavel", "Filhote/nao identificavel",
-            "Filhote/nao identificavel", "Filhote/nao identificavel","Filhote/nao identificavel", "Filhote/nao identificavel",
-            "Filhote/nao identificavel","Filhote/nao identificavel","Filhote/nao identificavel", "Femea"};
+    public static String genderPassaro[] = {"Não observável", "Não observável",
+            "Não observável", "Não observável","Não observável", 
+            "Não observável", "Não observável","Não observável",
+            "Não observável", "Femea"};
 
     public static String namePhoto[] = {"E. Chiarani", "M.Repenning", "C. Beier", 
-            "M.Repenning", "C.B. Andretti", "M. Bettio",
-            "E.Chiarani", "E.Chiarani", "M.Repenning", 
-            "E.Chiarani"};
+            "M.Repenning", "C.B. Andretti", "M. Bettio", "E.Chiarani", "E.Chiarani", 
+            "M.Repenning", "E.Chiarani"};
     /**
      * Mostra o menu inicial do programa no terminal
      */
@@ -43,6 +44,10 @@ public class FontanaApp
         System.out.printf("0 - Sair%n");
     }
 
+    /***
+     * Mostra informaçẽos de um catálogo de aves e premite a criação de anotações sobre aves
+     * avistadas
+     */
     public static void main(String[]args)
     {
         Scanner sc = new Scanner(System.in);
