@@ -30,6 +30,9 @@ public class FontanaApp
             "M.Repenning", "C.B. Andretti", "M. Bettio",
             "E.Chiarani", "E.Chiarani", "M.Repenning", 
             "E.Chiarani"};
+    /**
+     * Mostra o menu inicial do programa no terminal
+     */
     public static void printMenu() {
         System.out.printf("\f");
         System.out.printf("MENU %n");
@@ -117,12 +120,14 @@ public class FontanaApp
                     }
                     /*for(int i = 0; i < countAnotacoes; i++) {
                     System.out.println(anotacoes[i].toString());*/
+                    
                     break;
             }   
             numbering = 0;
             System.out.println("\nSair? (S / N)");
             k = (sc.next()).toUpperCase();
         }
+        sc.close();
         System.out.println("Programa encerrado");
     }
     //Fim do menu
