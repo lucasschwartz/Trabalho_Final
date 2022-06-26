@@ -1,6 +1,7 @@
 import java.util.Scanner;
+
 /**
- * Anotações pedidas no trabalho. 
+ * Um caderno de anotações com registro de aves avistadas em determinda data hora e local
  * O usuário poderá registrar e acessar informações disponíveis nessa classe.
  *
  * @author (Lavínia)
