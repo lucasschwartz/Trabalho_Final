@@ -1,12 +1,11 @@
 import java.util.Scanner;
 
 /**  
-* Dados ficaram salvos dentro dessa classe.
-* Aqui ficará o Menu(por enquanto).
-* @Gabriel @Hélio @Lavínia @Lucas @Matheus
-*/
-  
- 
+ * Dados ficaram salvos dentro dessa classe.
+ * Aqui ficará o Menu(por enquanto).
+ * @Gabriel @Hélio @Lavínia @Lucas @Matheus
+ */
+
 public class FontanaApp
 {
     public static String nomesCientificos[] = {"Patagioenas picazuro", "Patagioenas maculosa", "Zenaida auriculata", 
@@ -28,10 +27,19 @@ public class FontanaApp
             "Filhote/nao identificavel","Filhote/nao identificavel","Filhote/nao identificavel", "Femea"};
 
     public static String namePhoto[] = {"E. Chiarani", "M.Repenning", "C. Beier", 
-                "M.Repenning", "C.B. Andretti", "M. Bettio",
-                "E.Chiarani", "E.Chiarani", "M.Repenning", 
-                "E.Chiarani"};
-                
+            "M.Repenning", "C.B. Andretti", "M. Bettio",
+            "E.Chiarani", "E.Chiarani", "M.Repenning", 
+            "E.Chiarani"};
+    public static void printMenu() {
+        System.out.printf("\f");
+        System.out.printf("MENU %n");
+        System.out.printf("1 - Acessar Catálogo%n");
+        System.out.printf("2 - Pesquisar no Catálogo%n");
+        System.out.printf("3 - Criar Anotações%n");
+        System.out.printf("4 - Acessar Anotações%n");
+        System.out.printf("0 - Sair%n");
+    }
+
     public static void main(String[]args)
     {
         Scanner sc = new Scanner(System.in);
@@ -40,24 +48,15 @@ public class FontanaApp
         Anotacoes anotacoes[] = new Anotacoes[100];
         int countAnotacoes = 0;
         int number = 1, option = 1, option2 = 0, numbering = 0;
-        
+
         for(int i = 0; i < 10; i++) {
-                aves[i] = new Ave(nomesCientificos[i], sizePassaro[i],colorPassaro[i],habitatPassaro[i], genderPassaro[i], namePhoto[i]);
-            }
-            
-        // FAZER UM WHILE A PARTIR DAQUI PRO PROGRAMA CONTINUAR RODANDO ATÉ A CONDIÇÃO 0!!!
-            
-        
-        // Inicio do menu
+            aves[i] = new Ave(nomesCientificos[i], sizePassaro[i], colorPassaro[i], 
+                                habitatPassaro[i], genderPassaro[i], namePhoto[i]);
+        }
+
         String k = "N";
         while (!(k.equals("S"))) {
-            System.out.printf("\f");
-            System.out.printf("MENU %n");
-            System.out.printf("1 - Acessar Catálogo%n");
-            System.out.printf("2 - Pesquisar no Catálogo%n");
-            System.out.printf("3 - Criar Anotações%n");
-            System.out.printf("4 - Acessar Anotações%n");
-            System.out.printf("0 - Sair%n");
+            printMenu();
             option = sc.nextInt();
             System.out.printf("\f");
 
@@ -72,12 +71,16 @@ public class FontanaApp
                     }
                     number = sc.nextInt();
                     System.out.printf("\f");
-                    System.out.printf("Nome: %s%nTamanho: %s%nCor: %s%nHabitat: %s%nGênero: %s%nFoto: %s  %n", aves[number].getName(), aves[number].getSize(), aves[number].getColor(), aves[number].getHabitat(), aves[number].getGender(), aves[number].getNamephoto());
-
+                    System.out.printf("Nome: %s%nTamanho: %s%nCor: %s%nHabitat: %s%nGênero: %s%nFoto: %s  %n", 
+                                        aves[number].getName(), aves[number].getSize(), 
+                                        aves[number].getColor(), aves[number].getHabitat(), 
+                                        aves[number].getGender(), aves[number].getNamephoto());
                     break;
+                    
                 case 2:
                     System.out.println("Tamo trabalhando nisso");
                     break;
+                    
                 case 3:
                     System.out.println("Insira a data");
                     String data = sc.next();
@@ -96,30 +99,31 @@ public class FontanaApp
                     anotacoes[countAnotacoes] = new Anotacoes(data, horario, local, aux);
                     countAnotacoes++;
                     break;
+                    
                 case 4:
                     System.out.printf("Como Gostaria de Pesquisar?%n");
                     System.out.printf("1 - Acessar por Mes%n");
                     System.out.printf("2 - Acessar por %n");
                     System.out.printf("3 - Acessar Todas as Anotações%n");
                     option2 = sc.nextInt();
-                    
+
                     /*switch(option2){
-                        case 1:
-                            
-                        System.out.printf("Qual o Mes?");
-                            int mes = sc.newInt();
-                        case 2:
-                            
+                case 1:
+
+                    System.out.printf("Qual o Mes?");
+                    int mes = sc.newInt();
+                case 2:
+
                     }
                     /*for(int i = 0; i < countAnotacoes; i++) {
-                        System.out.println(anotacoes[i].toString());*/
+                    System.out.println(anotacoes[i].toString());*/
                     break;
             }   
             numbering = 0;
             System.out.println("\nSair? (S / N)");
             k = (sc.next()).toUpperCase();
         }
-            System.out.println("Programa encerrado");
-        }
-        //Fim do menu
+        System.out.println("Programa encerrado");
     }
+    //Fim do menu
+}
