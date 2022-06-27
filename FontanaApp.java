@@ -55,8 +55,6 @@ public class FontanaApp
      * Mostra o menu de seleção por habitat
      */
     public static void menuHabitat(){
-        System.out.printf("\f");
-        System.out.println("Escolha o Habitat:");
         System.out.printf("1 - %s%n", hab[1]);
         System.out.printf("2 - %s%n", hab[2]);
         System.out.printf("3 - %s%n", hab[3]);
@@ -130,31 +128,13 @@ public class FontanaApp
                     break;
 
                 case 2:
-                    System.out.println("Escolha seu Campo de pesquisa");
-                    System.out.println("1 - Filtrar Cor %n2 - Filtrar Habitat %n3 - Filtrar por Fotógrafo");
-                    int op = sc.nextInt();
-                    if(op == 1){
-                        System.out.println("Escolha a cor");
-                        System.out.println("1 - cinza");
-                        int b = sc.nextInt();
-                        System.out.println("Informe o Pássaro:");
-                        for(int i = 0; i < 10; i++) {
-                            System.out.printf("%d - %s %n",numbering, aves[i].getName());
-                            numbering++;
-                        }
-                        b = sc.nextInt();
-                        printAve(b, aves);
-                        numbering = 0;
-                    }
-                    if(op == 2){
+                    System.out.println("\f");
+                    System.out.println("Filtrar Habitat");
                         menuHabitat();
                         int x = sc.nextInt();
                         selecaoPorHabitat(x, aves);
                         int y = sc.nextInt();
                         printAve(y, aves);
-                    }else{
-                        System.out.println("Opção Inválida");
-                    }
                     break;
 
                 case 3:
