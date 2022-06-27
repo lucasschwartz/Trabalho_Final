@@ -8,7 +8,8 @@ public class Ave
     String namephoto; // name do fotagrafo que tirou a foto
 
     /**
-     * Constructor for objects of class Avianos
+     * 
+     * Criação das variaveis/ campo para o casdatro do passaro.
      */
     public Ave(String name,String size, String color, String habitat, String gender, String namephoto)
     {

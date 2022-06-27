@@ -8,6 +8,9 @@ import java.util.Scanner;
 
 public class FontanaApp
 {
+    /**
+     * Criação dos valores atribuidos a cada passaro.
+     */
     public static String nomesCientificos[] = {"Patagioenas picazuro", "Patagioenas maculosa", 
             "Zenaida auriculata", "Columbina picui", "Gubernetes yetapa", "Xolmis cinereus",
             "Griseotyrannus aurantioatrocristatus", "Prognet tapera", "Suiriri suiriri", 

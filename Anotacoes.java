@@ -3,9 +3,6 @@ import java.util.Scanner;
 /**
  * Um caderno de anotações com registro de aves avistadas em determinda data hora e local
  * O usuário poderá registrar e acessar informações disponíveis nessa classe.
- *
- * @author (Lavínia)
- * @version (22/06/2022)
  */
 public class Anotacoes
 {
@@ -31,15 +28,21 @@ public class Anotacoes
     public String getData(){
         return this.data;
     }
-    
+    /**
+     * Passa o horario de uma determinada anotação
+     */
     public String getHorario(){
         return this.horario;
     }
-    
+    /**
+     * Passa o Local de uma determinada anotação
+     */
     public String getLocal(){
         return this.local;
     }
-    
+    /**
+     * Passa o nome de um passaro na anotação.
+     */
     public String getName(){
         return this.passaro;
     }
