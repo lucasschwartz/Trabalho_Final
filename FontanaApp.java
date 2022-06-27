@@ -135,13 +135,7 @@ public class FontanaApp
                     selecaoPorHabitat(x, aves);
                     int y = sc.nextInt();
                     printAve(y, aves);
-                    //System.out.println("Para voltar ao menu digite 0");
-                    //y =0;
-                    /*if (y == 0){
-                        printMenu();
-                        option = sc.nextInt();
-                        System.out.printf("\f");
-                    }*/
+                    
                     break;
 
                 case 3:
