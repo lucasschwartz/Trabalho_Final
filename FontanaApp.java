@@ -31,6 +31,18 @@ public class FontanaApp
     public static String namePhoto[] = {"E. Chiarani", "M.Repenning", "C. Beier", 
             "M.Repenning", "C.B. Andretti", "M. Bettio", "E.Chiarani", "E.Chiarani", 
             "M.Repenning", "E.Chiarani"};
+            
+    /**
+     * Mostra as característiacas do pássaro selecionado
+     */
+    public static void printAve(int n, Ave aves[]){
+        System.out.printf("\f");
+        System.out.printf("Nome: %s%nTamanho: %s%nCor: %s%nHabitat: %s%nGênero: %s%nFoto: %s  %n", 
+                aves[n].getName(), aves[n].getSize(), 
+                aves[n].getColor(), aves[n].getHabitat(), 
+                aves[n].getGender(), aves[n].getNamephoto());
+    }
+    
     /**
      * Mostra o menu inicial do programa no terminal
      */
@@ -78,21 +90,29 @@ public class FontanaApp
                         numbering++;
                     }
                     number = sc.nextInt();
-                    System.out.printf("\f");
-                    System.out.printf("Nome: %s%nTamanho: %s%nCor: %s%nHabitat: %s%nGênero: %s%nFoto: %s  %n", 
-                        aves[number].getName(), aves[number].getSize(), 
-                        aves[number].getColor(), aves[number].getHabitat(), 
-                        aves[number].getGender(), aves[number].getNamephoto());
+                    printAve(number, aves);
+                    numbering = 0;
                     break;
 
                 case 2:
                     System.out.println("Escolha seu Campo de pesquisa");
-                    System.out.println("1 - Para filtrar Mês , 2 Para filtrar Habitat: ");
-                    if(option == 1){
-                        System.out.println("Escolha o mês");    
+                    System.out.println("1 - Para filtrar Cor , 2 Para filtrar Habitat: ");
+                    int op = sc.nextInt();
+                    if(op == 1){
+                        System.out.println("Escolha a cor");
+                        System.out.println("1 - cinza");
+                        int b = sc.nextInt();
+                        System.out.println("Informe o Pássaro");
+                        for(int i = 0; i < 10; i++) {
+                            System.out.printf("%d - %s %n",numbering, aves[i].getName());
+                            numbering++;
+                        }
+                        b = sc.nextInt();
+                        printAve(b, aves);
+                        numbering = 0;
                     }
-                    if(option == 2){
-                        System.out.println("Escolha o Habitat");
+                    if(op == 2){
+                        System.out.println("Escolha o Habitat:");
                     }else{
                         System.out.println("Opção Inválida");
                     }
