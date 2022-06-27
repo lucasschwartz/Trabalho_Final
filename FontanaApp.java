@@ -22,14 +22,14 @@ public class FontanaApp
             "Campo seco alto/campo com arvores", "Campo seco alto/banhado com vegetaçao",
             "Campo seco alto/campo com arvores", "Campo com arvores", "Diversos", "Diversos", 
             "Campo seco baixo/campo com arvores"};
-            
+
     public static String hab[] = {" ", "Campo com arvores", "Campo seco alto", "Campo seco baixo", 
             "Banhado com vegetaçao", "Diversos"};
-    
+
     public static String habitatFiltro[][] = {{"Diversos", "Diversos"}, {"Campo com arvores", "Campo com arvores"},
-    {"Diversos", "Diversos"}, {"Campo seco alto", "Campo com arvores"}, {"Campo seco alto", "banhado com vegetaçao"},
-    {"Campo seco alto", "campo com arvores"}, {"Campo com arvores", "Campo com arvores"}, 
-    {"Diversos", "Diversos"}, {"Diversos", "Diversos"}, {"Campo seco baixo", "campo com arvores"}};
+            {"Diversos", "Diversos"}, {"Campo seco alto", "Campo com arvores"}, {"Campo seco alto", "banhado com vegetaçao"},
+            {"Campo seco alto", "campo com arvores"}, {"Campo com arvores", "Campo com arvores"}, 
+            {"Diversos", "Diversos"}, {"Diversos", "Diversos"}, {"Campo seco baixo", "campo com arvores"}};
 
     public static String genderPassaro[] = {"Não observável", "Não observável",
             "Não observável", "Não observável","Não observável", 
@@ -39,18 +39,18 @@ public class FontanaApp
     public static String namePhoto[] = {"E. Chiarani", "M.Repenning", "C. Beier", 
             "M.Repenning", "C.B. Andretti", "M. Bettio", "E.Chiarani", "E.Chiarani", 
             "M.Repenning", "E.Chiarani"};
-            
+
     /**
      * Mostra as característiacas do pássaro selecionado
      */
     public static void printAve(int n, Ave aves[]){
         System.out.printf("\f");
         System.out.printf("Nome: %s%nTamanho: %s%nCor: %s%nHabitat: %s%nGênero: %s%nFoto: %s  %n", 
-                aves[n].getName(), aves[n].getSize(), 
-                aves[n].getColor(), aves[n].getHabitat(), 
-                aves[n].getGender(), aves[n].getNamephoto());
+            aves[n].getName(), aves[n].getSize(), 
+            aves[n].getColor(), aves[n].getHabitat(), 
+            aves[n].getGender(), aves[n].getNamephoto());
     }
-    
+
     /**
      * Mostra o menu de seleção por habitat
      */
@@ -61,7 +61,7 @@ public class FontanaApp
         System.out.printf("4 - %s%n", hab[4]);
         System.out.printf("5 - %s%n", hab[5]);
     }
-    
+
     /**
      * Mostra os pássaros que vivem no tipo de habitat selecionado
      */
@@ -70,12 +70,12 @@ public class FontanaApp
         System.out.println("Informe o Pássaro:");
         for (int i = 0; i < 10; i++) {
             if (hab[a].equalsIgnoreCase(habitatFiltro[i][0]) || 
-                hab[a].equalsIgnoreCase(habitatFiltro[i][1])) {
+            hab[a].equalsIgnoreCase(habitatFiltro[i][1])) {
                 System.out.printf("%d - %s %n", i, aves[i].getName());
             }
         }
     }
-    
+
     /**
      * Mostra o menu inicial do programa no terminal
      */
@@ -130,11 +130,18 @@ public class FontanaApp
                 case 2:
                     System.out.println("\f");
                     System.out.println("Filtrar Habitat");
-                        menuHabitat();
-                        int x = sc.nextInt();
-                        selecaoPorHabitat(x, aves);
-                        int y = sc.nextInt();
-                        printAve(y, aves);
+                    menuHabitat();
+                    int x = sc.nextInt();
+                    selecaoPorHabitat(x, aves);
+                    int y = sc.nextInt();
+                    printAve(y, aves);
+                    //System.out.println("Para voltar ao menu digite 0");
+                    //y =0;
+                    /*if (y == 0){
+                        printMenu();
+                        option = sc.nextInt();
+                        System.out.printf("\f");
+                    }*/
                     break;
 
                 case 3:
@@ -152,15 +159,15 @@ public class FontanaApp
                     }
                     String nome = aves[sc.nextInt()-1].getName();
                     j = 1;
-                    
+
                     anotacoes[countAnotacoes] = new Anotacoes(data, horario, 
-                                                                local, nome);
+                        local, nome);
                     countAnotacoes++;
                     break;
 
                 case 4:
                     for(int i = 0; i < countAnotacoes; i++) {
-                        System.out.printf("Data: %s %nHorario: %s %nLocal: %s %nNome da Ave: %s",anotacoes[i].getData(),anotacoes[i].getHorario(),anotacoes[i].getLocal(),anotacoes[i].getName());
+                        System.out.printf("Data: %s %nHorario: %s %nLocal: %s %nNome da Ave: %s%n",anotacoes[i].getData(),anotacoes[i].getHorario(),anotacoes[i].getLocal(),anotacoes[i].getName());
                     }   
             }
             numbering = 0;
