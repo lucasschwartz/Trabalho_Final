@@ -22,6 +22,14 @@ public class FontanaApp
             "Campo seco alto/campo com arvores", "Campo seco alto/banhado com vegetaçao",
             "Campo seco alto/campo com arvores", "Campo com arvores", "Diversos", "Diversos", 
             "Campo seco baixo/campo com arvores"};
+            
+    public static String hab[] = {" ", "Campo com arvores", "Campo seco alto", "Campo seco baixo", 
+            "Banhado com vegetaçao", "Diversos"};
+    
+    public static String habitatFiltro[][] = {{"Diversos", "Diversos"}, {"Campo com arvores", "Campo com arvores"},
+    {"Diversos", "Diversos"}, {"Campo seco alto", "Campo com arvores"}, {"Campo seco alto", "banhado com vegetaçao"},
+    {"Campo seco alto", "campo com arvores"}, {"Campo com arvores", "Campo com arvores"}, 
+    {"Diversos", "Diversos"}, {"Diversos", "Diversos"}, {"Campo seco baixo", "campo com arvores"}};
 
     public static String genderPassaro[] = {"Não observável", "Não observável",
             "Não observável", "Não observável","Não observável", 
@@ -41,6 +49,33 @@ public class FontanaApp
                 aves[n].getName(), aves[n].getSize(), 
                 aves[n].getColor(), aves[n].getHabitat(), 
                 aves[n].getGender(), aves[n].getNamephoto());
+    }
+    
+    /**
+     * Mostra o menu de seleção por habitat
+     */
+    public static void menuHabitat(){
+        System.out.printf("\f");
+        System.out.println("Escolha o Habitat:");
+        System.out.printf("1 - %s%n", hab[1]);
+        System.out.printf("2 - %s%n", hab[2]);
+        System.out.printf("3 - %s%n", hab[3]);
+        System.out.printf("4 - %s%n", hab[4]);
+        System.out.printf("5 - %s%n", hab[5]);
+    }
+    
+    /**
+     * Mostra os pássaros que vivem no tipo de habitat selecionado
+     */
+    public static void selecaoPorHabitat(int a, Ave aves[]){
+        System.out.printf("\f");
+        System.out.println("Informe o Pássaro:");
+        for (int i = 0; i < 10; i++) {
+            if (hab[a].equalsIgnoreCase(habitatFiltro[i][0]) || 
+                hab[a].equalsIgnoreCase(habitatFiltro[i][1])) {
+                System.out.printf("%d - %s %n", i, aves[i].getName());
+            }
+        }
     }
     
     /**
@@ -84,7 +119,7 @@ public class FontanaApp
                 case 0:
                     break;
                 case 1: 
-                    System.out.println("Informe o Pássaro");
+                    System.out.println("Informe o Pássaro:");
                     for(int i = 0; i < 10; i++) {
                         System.out.printf("%d - %s %n",numbering, aves[i].getName());
                         numbering++;
@@ -96,13 +131,13 @@ public class FontanaApp
 
                 case 2:
                     System.out.println("Escolha seu Campo de pesquisa");
-                    System.out.println("1 - Para filtrar Cor , 2 Para filtrar Habitat: ");
+                    System.out.println("1 - Filtrar Cor %n2 - Filtrar Habitat %n3 - Filtrar por Fotógrafo");
                     int op = sc.nextInt();
                     if(op == 1){
                         System.out.println("Escolha a cor");
                         System.out.println("1 - cinza");
                         int b = sc.nextInt();
-                        System.out.println("Informe o Pássaro");
+                        System.out.println("Informe o Pássaro:");
                         for(int i = 0; i < 10; i++) {
                             System.out.printf("%d - %s %n",numbering, aves[i].getName());
                             numbering++;
@@ -112,7 +147,11 @@ public class FontanaApp
                         numbering = 0;
                     }
                     if(op == 2){
-                        System.out.println("Escolha o Habitat:");
+                        menuHabitat();
+                        int x = sc.nextInt();
+                        selecaoPorHabitat(x, aves);
+                        int y = sc.nextInt();
+                        printAve(y, aves);
                     }else{
                         System.out.println("Opção Inválida");
                     }
@@ -125,7 +164,7 @@ public class FontanaApp
                     String horario = sc.next();
                     System.out.println("Insira o local");
                     String local = sc.next();
-                    System.out.println("Informe o Pássaro");
+                    System.out.println("Informe o Pássaro:");
                     int j = 1;
                     for(int i = 0; i < 10; i++) {
                         System.out.printf("%d - %s %n",j, aves[i].getName());
