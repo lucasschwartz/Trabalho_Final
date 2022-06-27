@@ -105,23 +105,23 @@ public class FontanaApp
                     String horario = sc.next();
                     System.out.println("Insira o local");
                     String local = sc.next();
-                    System.out.println("Insira o passaro");
-                    String nome = sc.next();
-                    //System.out.print("");
-                    //String teste - sc.next();
-                    Ave aux = null;
-                    for(int i = 0; i < aves.length; i++){
-                        if(nome.equalsIgnoreCase(aves[i].getName())){
-                            aux = aves[i];
-                        }
+                    System.out.println("Informe o Pássaro");
+                    int j = 1;
+                    for(int i = 0; i < 10; i++) {
+                        System.out.printf("%d - %s %n",j, aves[i].getName());
+                        j++;
                     }
-                    anotacoes[countAnotacoes] = new Anotacoes(data, horario, local, aux);
+                    String nome = aves[sc.nextInt()-1].getName();
+                    j = 1;
+                    
+                    anotacoes[countAnotacoes] = new Anotacoes(data, horario, 
+                                                                local, nome);
                     countAnotacoes++;
                     break;
 
                 case 4:
                     for(int i = 0; i < countAnotacoes; i++) {
-                        System.out.printf("Data:%s %nHorario:%s %nLocal:%s %nNome da Ave:",anotacoes[i].getData(),anotacoes[i].getHorario(),anotacoes[i].getLocal()/*,anotacoes[i].getAveNome()*/);
+                        System.out.printf("Data: %s %nHorario: %s %nLocal: %s %nNome da Ave: %s",anotacoes[i].getData(),anotacoes[i].getHorario(),anotacoes[i].getLocal(),anotacoes[i].getName());
                     }   
             }
             numbering = 0;

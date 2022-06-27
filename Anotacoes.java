@@ -12,12 +12,12 @@ public class Anotacoes
     public String data;
     public String horario;
     public String local;
-    public Ave passaro;
+    public String passaro;
     
     /**
      *  Contrutor de objetos da classe anotação
      */
-    public Anotacoes(String data, String horario, String local, Ave passaro)
+    public Anotacoes(String data, String horario, String local, String passaro)
     {
         this.data = data;
         this.horario = horario;
@@ -40,8 +40,8 @@ public class Anotacoes
         return this.local;
     }
     
-    public String getAveNome(){
-        return passaro.getName();
+    public String getName(){
+        return this.passaro;
     }
     
 }
