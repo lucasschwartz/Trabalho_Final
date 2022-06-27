@@ -41,7 +41,7 @@ public class Anotacoes
     }
     
     public String getAveNome(){
-        return this.passaro.getName();
+        return passaro.getName();
     }
     
 }

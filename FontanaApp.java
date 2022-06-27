@@ -86,7 +86,16 @@ public class FontanaApp
                     break;
 
                 case 2:
-                    System.out.println("Tamo trabalhando nisso");
+                    System.out.println("Escolha seu Campo de pesquisa");
+                    System.out.println("1 - Para filtrar Mês , 2 Para filtrar Habitat: ");
+                    if(option == 1){
+                        System.out.println("Escolha o mês");    
+                    }
+                    if(option == 2){
+                        System.out.println("Escolha o Habitat");
+                    }else{
+                        System.out.println("Opção Inválida");
+                    }
                     break;
 
                 case 3:
