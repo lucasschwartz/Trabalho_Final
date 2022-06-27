@@ -32,8 +32,16 @@ public class Anotacoes
         return this.data;
     }
     
-    public String toString(){
-        return data + " "+ horario +" "+ local +" "+ passaro.getName()+" "+ passaro.getSize()+" "+ passaro.getColor()+" "+ passaro.getHabitat()+" "+ passaro.getGender()+" "+ passaro.getNamephoto();
+    public String getHorario(){
+        return this.horario;
+    }
+    
+    public String getLocal(){
+        return this.local;
+    }
+    
+    public String getAveNome(){
+        return this.passaro.getName();
     }
     
 }

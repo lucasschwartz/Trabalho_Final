@@ -98,6 +98,8 @@ public class FontanaApp
                     String local = sc.next();
                     System.out.println("Insira o passaro");
                     String nome = sc.next();
+                    //System.out.print("");
+                    //String teste - sc.next();
                     Ave aux = null;
                     for(int i = 0; i < aves.length; i++){
                         if(nome.equalsIgnoreCase(aves[i].getName())){
@@ -110,7 +112,7 @@ public class FontanaApp
 
                 case 4:
                     for(int i = 0; i < countAnotacoes; i++) {
-                        System.out.println(anotacoes[i].toString());
+                        System.out.printf("Data:%s %nHorario:%s %nLocal:%s %nNome da Ave:",anotacoes[i].getData(),anotacoes[i].getHorario(),anotacoes[i].getLocal()/*,anotacoes[i].getAveNome()*/);
                     }   
             }
             numbering = 0;
